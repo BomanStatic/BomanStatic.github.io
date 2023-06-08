@@ -1,1 +1,0 @@
-# BomanStatic.github.io
