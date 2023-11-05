@@ -1,0 +1,198 @@
+@import url("./reset.css") layer(reset);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+
+:root[data-theme="light"] {
+    --text: hsl(43, 90%, 4%);
+    --background: hsl(45, 100%, 96%);
+    --primary: hsl(31, 100%, 50%);
+    --secondary: hsl(45, 100%, 92%);
+    --accent: hsl(18, 93%, 42%);
+    --static: rgba(0, 0, 0, 0.1);
+}
+:root[data-theme="dark"] {
+    --text: hsl(43, 90%, 96%);
+    --background: hsl(45, 100%, 4%);
+    --primary: hsl(31, 100%, 50%);
+    --secondary: hsl(45, 100%, 8%);
+    --accent: hsl(18, 93%, 58%);
+    --static: rgba(255, 255, 255, 0.1);
+}
+:root {
+    --fs-family: "Poppins", sans-serif;
+    --container-width: min(calc(100% - 2rem), 80rem);
+    --content-margin-block: 6rem;
+    --border-radius: 0.5rem;
+}
+::selection {
+    background-color: var(--accent);
+    color: var(--background);
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--fs-family);
+}
+header {
+    border-bottom: 1px solid var(--static);
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.5rem;
+    width: var(--container-width);
+    margin-inline: auto;
+}
+nav > ul {
+    display: flex;
+    gap: 1rem;
+}
+nav > ul > li {
+    transition: color 0.2s ease-in-out;
+}
+nav > ul > li:hover {
+    color: var(--accent);
+}
+main {
+    width: var(--container-width);
+    margin-inline: auto;
+}
+main > * {
+    margin-block: var(--content-margin-block);
+}
+
+.theme-switcher {
+    all: unset;
+    cursor: pointer;
+}
+
+/* --------------- SECTION PROJEKT --------------- */
+.section-info {
+    line-height: 1.7;
+}
+.section-info > h2 {
+    font-size: clamp(1rem, 10vw, 5rem);
+    align-self: end;
+}
+.section-info > img {
+    grid-row: 1/3;
+    grid-column: 2/-1;
+    place-self: center;
+}
+.section-info:has(> img) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.section-info > p {
+    place-self: start;
+}
+.project-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin-block: 2rem;
+}
+.card {
+    border: 1px solid var(--static);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+}
+.card > img {
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__container {
+    padding: 0rem 1rem 1rem 1rem;
+}
+/* .builtwith {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+.builtwith__pill {
+    --_pillBackground-start: blue;
+    --_pillBackground-end: red;
+    padding-inline: 0.5rem;
+    padding-block: 0.1rem;
+    background: linear-gradient(120deg, var(--_pillBackground-start), var(--_pillBackground-end));
+    border-radius: 50vh;
+    border: 1px solid var(--static);
+}
+.pill-html {
+    --_pillBackground-start: #e34c26;
+    --_pillBackground-end: #f06529;
+}
+.pill-css {
+    --_pillBackground-start: #264de4;
+    --_pillBackground-end: #2965f1;
+} */
+.card__container > span {
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card__container > h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.card__container > p {
+    margin-block: 0.5rem;
+}
+.card__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--static);
+}
+.card__links > a {
+    padding: 0.75rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__links > a:hover {
+    background-color: var(--static);
+}
+.card__links > a:first-child {
+    border-right: 1px solid var(--static);
+}
+.view-more {
+    grid-column: 1/-1;
+    place-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.view-more > * {
+    transition: all 0.2s ease-in-out;
+    color: var(--accent);
+}
+.view-more:hover * {
+    transform: translateX(0.2rem);
+}
+.view-more:hover {
+    background: linear-gradient(120deg, var(--accent), var(--primary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* https://www.realtimecolors.com/?colors=fef9ec-140f00-ff8400-291f00-f86c30&fonts=Poppins-Poppins */

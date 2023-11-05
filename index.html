@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul role="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Projekt</a></li>
+                    <li><a href="">Om mig</a></li>
+                </ul>
+                <button id="theme" class="theme-switcher" title="Theme switcher" type="button">
+                    <iconify-icon
+                        id="themeIcon"
+                        icon="line-md:sunny-filled-loop-to-moon-filled-transition"
+                        width="30"
+                        height="30"
+                    ></iconify-icon>
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section id="aboutMe">
+                <article class="section-info">
+                    <h2>Om mig</h2>
+                    <p>
+                        Hej, jag är Pontus Boman, förstaårselev på en yrkeshögskola och passionerad om frontend-utveckling. Mitt mål är att
+                        bli en skicklig frontend developer och skapa fantastiska digitala upplevelser. Jag älskar att utforska kreativa
+                        lösningar och använda mina tekniska kunskaper för att göra webbplatser och appar både användarvänliga och estetiskt
+                        tilltalande. Med en stark drivkraft och entusiasm för programmering, ser jag fram emot att utforska den spännande
+                        världen av webbutveckling och skapa innovativa digitala projekt i framtiden.
+                    </p>
+                    <img src="./assets/img/avatar.svg" alt="" />
+                </article>
+            </section>
+            <section id="project">
+                <article class="section-info">
+                    <h2>Frontend Mentor</h2>
+                    <p>
+                        Frontend Mentor är en onlineplattform som erbjuder praktiska utmaningar och verkliga projekt för
+                        frontend-utvecklare. Genom att tillhandahålla designfiler och specifikationer möjliggör Frontend Mentor för mig att
+                        öva och förbättra mina färdigheter inom webbutveckling, inklusive HTML, CSS och JavaScript. Genom att lösa dessa
+                        utmaningar kan jag bygga responsiva webbplatser och appar samtidigt som jag får värdefull erfarenhet och feedback
+                        från en aktiv gemenskap av likasinnade. Plattformen är idealisk för mig som vill utveckla mina tekniska kunskaper
+                        och skapa en imponerande portfolio med verkliga projekt.
+                    </p>
+                </article>
+                <div class="project-card-list">
+                    <article class="card">
+                        <img src="./assets/img/four_cards.png" alt="" />
+                        <div class="card__container">
+                            <!-- <div class="builtwith">
+                                <p class="builtwith__pill pill-html">HTML</p>
+                                <p class="builtwith__pill pill-css">CSS</p>
+                            </div> -->
+                            <span>Frontend Mentor</span>
+                            <h3>Four card feature section</h3>
+                            <p>Jag använde grid för att placera ut dem fyra korten.</p>
+                        </div>
+                        <div class="card__links">
+                            <a href="">Live</a>
+                            <a href="">Github</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/img/time_control.png" alt="" />
+                        <div class="card__container">
+                            <span>Frontend Mentor</span>
+                            <h3>Time tracking dashboard</h3>
+                            <p>Jag använde "privata" custom properties för att ändra färgen på dem olika korten</p>
+                        </div>
+                        <div class="card__links">
+                            <a href="">Live</a>
+                            <a href="">Github</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/img/four_cards.png" alt="" />
+                        <div class="card__container">
+                            <span>Frontend Mentor</span>
+                            <h3>Four card feature section</h3>
+                            <p>Lite text om projektet???</p>
+                        </div>
+                        <div class="card__links">
+                            <a href="">Live</a>
+                            <a href="">Github</a>
+                        </div>
+                    </article>
+                    <a class="view-more" href="">View more <iconify-icon icon="bi:arrow-up" rotate="90deg"></iconify-icon></a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
